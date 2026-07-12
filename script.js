@@ -18,7 +18,7 @@ function displayTokenAmount() {
 }
 
 function displayTPS() {
-    tpsDisplay.innerText = "Tokens per tick: " + Math.round(autoClickers);
+    tpsDisplay.innerText = "Tokens per second: " + Math.round(autoClickers);
 }
 
 tokenButton.addEventListener('click', function() {
@@ -41,7 +41,7 @@ upgradeClicker.addEventListener('click', function() {
 autoClicker.addEventListener('click', function() {
     if (duskTokens >= autoClickerCost) {
         duskTokens -= autoClickerCost;
-        autoClickers ++;
+        autoClickers +=1;
         autoClickerCost *= 1.25;
         displayTokenAmount();
         displayTPS();
@@ -54,6 +54,6 @@ autoClicker.addEventListener('click', function() {
 setInterval(function() {
     if (autoClickers <= 0) { return; }
 
-    duskTokens += autoClickers * 0.1;
+    duskTokens += autoClickers;
     displayTokenAmount();
-}, 1000/6);
+}, 1000);
