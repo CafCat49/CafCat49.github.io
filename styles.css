@@ -1,0 +1,29 @@
+#tokenClicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    color: magenta;
+    font-family: Impact, sans-serif;
+}
+
+#tokenDisplay {
+    font-size: 48px;
+    padding-bottom: 10px;
+}
+
+#tpsDisplay {
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+#tokenButton {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(115, 0, 255);
+    color: gold;
+    font-size: 128px;
+    font-weight: bold;
+}

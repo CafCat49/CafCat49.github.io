@@ -1,5 +1,6 @@
 var tokenButton = document.getElementById('tokenButton');
 var tokenDisplay = document.getElementById('tokenDisplay');
+var tpsDisplay = document.getElementById('tpsDisplay');
 
 var upgradeClicker = document.getElementById('upgradeClicker');
 var autoClicker = document.getElementById('autoClicker');
@@ -14,6 +15,10 @@ var autoClickerCost = 15;
 
 function displayTokenAmount() {
     tokenDisplay.innerText = "Dusk Tokens: " + Math.round(duskTokens * 100) / 100;
+}
+
+function displayTPS() {
+    tpsDisplay.innerText = "Tokens per tick: " + Math.round(autoClickers * 0.1 * 100) / 100;
 }
 
 tokenButton.addEventListener('click', function() {
@@ -39,6 +44,7 @@ autoClicker.addEventListener('click', function() {
         autoClickers ++;
         autoClickerCost *= 1.25;
         displayTokenAmount();
+        displayTPS();
         autoClicker.innerText = "Buy Auto Clicker (Cost: " + Math.round(autoClickerCost * 100) / 100 + ")";
     } else {
         alert("Not enough Dusk Tokens!");
