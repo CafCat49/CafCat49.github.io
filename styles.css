@@ -20,10 +20,16 @@
 }
 
 #tokenButton {
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: black;
+}
+
+#tokenButton img {
     width: 250px;
-    height: 250px;
-    background-color: rgb(115, 0, 255);
-    color: gold;
-    font-size: 128px;
-    font-weight: bold;
+    height: 250px; 
+    object-fit: contain;
+    vertical-align: middle;
 }
