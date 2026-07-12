@@ -18,7 +18,7 @@ function displayTokenAmount() {
 }
 
 function displayTPS() {
-    tpsDisplay.innerText = "Tokens per tick: " + Math.round(autoClickers * 0.1);
+    tpsDisplay.innerText = "Tokens per tick: " + Math.round(autoClickers * 0.1) / 1;
 }
 
 tokenButton.addEventListener('click', function() {
