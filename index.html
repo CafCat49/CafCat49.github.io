@@ -7,14 +7,57 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="tokenClicker">
+<div id="tokenClicker">
+    <div class="clicker-section">
         <div id="tokenDisplay">Dusk Tokens: 0</div>
         <div id="tpsDisplay">Tokens per second: 0</div>
-        <button type="button" id="tokenButton"><img src="assets/dusk.png" alt="Dusk Token"></button>
-        <button type="button" id="upgradeClicker">Upgrade Clicker (Cost: 25 Dusk Tokens)</button>
-        <button type="button" id="autoClicker">Buy Auto Clicker (Cost: 15 Dusk Tokens)</button>
+        <button type="button" id="tokenButton">
+            <img id="duskLogo" src="assets/dusk.png" alt="Dusk Token">
+        </button>
     </div>
-
-    <script src="script.js"></script>
+    <div class="dashboard-section">
+        <div class="game-layout">
+            <div id="store">
+                <h2>Dusk Store</h2>
+                <div>
+                    <button type="button" class="storeButton inactive" id="upgradeClicker">Upgrade Clicker (Cost: 25)</button>
+                    <button type="button" class="storeButton inactive" id="autoClicker">Buy Auto Clicker (Cost: 15)</button>
+                </div>
+                <div>
+                    <button type="button" class="storeButton inactive" id="upgradeRetainer">Level Up Retainer (Cost: 225)</button>
+                    <button type="button" class="storeButton inactive" id="hireRetainer">Hire Retainer (Cost: 100)</button>
+                </div>
+                <div>
+                    <button type="button" class="storeButton inactive" id="upgradeAirship">Upgrade Airship (Cost: 1050)</button>
+                    <button type="button" class="storeButton inactive" id="buyAirship">Buy Airship (Cost: 750)</button>
+                </div>
+                <div>
+                    <button type="button" class="storeButton inactive" id="upgradeSubmarine">Upgrade Submarine (Cost: 4200)</button>
+                    <button type="button" class="storeButton inactive" id="buySubmarine">Buy Submarine (Cost: 3600)</button>
+                </div>
+            </div>
+            <div id="inventory">
+                <h2>Stats</h2>
+                <ul id="inventoryDisplay">
+                    <li>Clicker Power: 1</li>
+                    <li>Auto Clickers: 0</li>
+                    <li>Retainers: 0</li>
+                    <li>Retainer Power: 0</li>
+                    <li>Airships: 0</li>
+                    <li>Airship Power: 0</li>
+                    <li>Submarines: 0</li>
+                    <li>Submarine Power: 0</li>
+                </ul>
+            </div>
+        </div>
+        <div id="danger">
+            <h2>Danger Zone</h2>
+            <div>
+                <button type="button" class="dangerButton" id="resetGame">Summon Evil Feivel to nuke your Dusk Tokens</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
